@@ -1,0 +1,64 @@
+import json
+import os
+
+# Directory paths
+extracted_dir = "/mnt/data/Echo_extracted"
+controls_dir = os.path.join(extracted_dir, 'Controls')
+
+# Initialize HTML, CSS, and JavaScript content
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerApps App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #app {
+            width: 100%;
+            height: 100%;
+            min-width: 640px;
+            min-height: 640px;
+            background-color: #f0f0f0;
+        }
+"""
+css_content = ""
+js_content = """
+    </style>
+</head>
+<body>
+    <div id="app">
+"""
+
+# Function to generate HTML and CSS from control data
+def generate_html_css(control, parent_id):
+    html = ""
+    css = ""
+    js = ""
+    control_id = f"{control['Name']}_{control['ControlUniqueId']}"
+    if control['Type'] == 'ControlInfo':
+        html += f'<div id="{control_id}"></div>\n'
+        css += f'#{control_id} {{\n'
+        # Apply styles based on control properties
+        if 'Rules' in control:
+            for rule in control['Rules']:
+                if rule['Property'] == 'BackgroundColor':
+                    css += f'    background-color: {rule["InvariantScript"]};\n'
+                elif rule['Property'] == 'Width':
+                    css += f'    width: {rule["InvariantScript"]}px;\n'
+                elif rule['Property'] == 'Height':
+                    css += f'    height: {rule["InvariantScript"]}px;\n'
+        css += '}\n'
+        # Add JavaScript logic
+        js += f'document.getElementById("{control_id}").addEventListener("click", function() {{\n'
+        js += f'    console.log("{control_id} clicked");\n'
+        js += '});\n'
+        # Process child controls
+        if 'Children' in control:
+            for child in control['Children']:
+                child_h
