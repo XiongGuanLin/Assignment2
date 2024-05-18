@@ -1,0 +1,32 @@
+Assignment 2:	
+
+Report of completion of Echo
+
+⚫ Development Outcome 
+1.Verification & Validation:
+1)Login: Email:user1    Password:123       
+(both email and password are correct,we can log in.)
+       Email:userkkk  Password:123       
+(email is incorrect,password is right,we cannot log in.)
+       Email:user1    Password:321
+       (email is correct,password is incorrect,we cannot log in.)
+2)Logout:Click the “exit” bottom,we can succeeded in logging out.
+           We will return to the “login&looking-for-help” Page.
+   3)looking-for-help: users can click the “looking for help” bottom to ask staff for help,they can leave their messages on that page and submit them.Our staff can view the messages on that page and improve our work according to them.
+   4)search-user: users can search other users with the searching column,they can input the name from another user and the page will navigate to the specific user's session window.
+          Example input:Jack---->turn to Jack’s session window
+          Example input:Wei---->turn to Wei’s session window
+    5)open-Files: users can open some file which set by the staff on the File-Page,users can view these public files if they like.
+          Example:
+Click “Filter” File---->turn to the document6 Page
+Click “Medical Excipient”File---->turn to the document5 Page
+2.Guideline for the user (User manual):
+  
+
+⚫ Team Collaboration
+ 1.Jira reports including Burnup Chart and Burndown Chart
+ 
+2.GitHub commit record and history
+
+⚫Test outcomes in PowerApps
+1.Using the PowerApps Test Studio to test all the test cases you have designed
