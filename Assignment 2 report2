@@ -21,7 +21,9 @@ Report of completion of Echo
 Click “Filter” File---->turn to the document6 Page
 Click “Medical Excipient”File---->turn to the document5 Page
 2.Guideline for the user (User manual):
-  
+  6) When the user clicks on the "Comm" icon at the bottom of the page, the user will be redirected to the chat page. Users can chat with other company personnel. You can also use the search function at the top of the page to quickly search for contacts that have been added.
+  7) When the user clicks on the "Chat File" icon, the page will be redirected to a summary of the files obtained during the private chat. Users can also use the search function at the top to quickly search for the target file.
+  8) In both the "File" and "Comm" pages, when the user clicks the arrow button "<-" in the upper right corner. The user will be logged out quickly.
 
 ⚫ Team Collaboration
  1.Jira reports including Burnup Chart and Burndown Chart
